@@ -1,0 +1,487 @@
+/*通用样式*/
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+.c{
+	margin: 0 auto;
+}
+ul{
+	list-style: none;
+}
+/*缩放效果*/
+@-webkit-keyframes scale{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.1);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+/*整体样式*/
+body{
+	overflow-x: hidden;
+}
+/*头部样式*/
+.header{
+	width: 100%;
+	height:75px ;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #fff;
+	border-bottom: 1px solid #E0E0E0;
+}
+.header_con{
+	width: 1080px;
+	height:75px;
+}
+/*logo样式*/
+.logo{
+	height:75px ;
+    width: 165px;
+    float: left;
+}
+.logo:hover{
+	-webkit-animation-name: scale;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+}
+.logo img{
+	width: 165px;
+	height: 45px;
+}
+.logo a{
+	display: block;
+	font-size:0;
+	padding: 15px 0;
+}
+/*导航条样式*/
+.nav{
+	float: right;
+	width: 718px;
+	height: 75px;
+	font-size: 16px;
+}
+.nav ul{
+	display: block;
+	width: 718px;
+	height: 75px;
+	overflow: hidden;
+}
+.nav ul li{
+	float: left;
+	padding-top: 14px;
+    height: 62px;
+    line-height: 58px;
+}
+.nav a{
+	display: block;
+	height: 58px;
+	padding: 0 18px;
+	color: #666;
+}
+.nav li:nth-child(1) a{
+	color: #0154a0;
+    border-bottom: 4px solid #0154a0;
+}
+.nav li:nth-child(3) a:hover,
+.nav li:nth-child(5) a:hover,
+.nav li:nth-child(7) a:hover,
+.nav li:nth-child(9) a:hover,
+.nav li:nth-child(11) a:hover{
+	color: #0154a0;
+    border-bottom: 4px solid #0154a0;
+}
+.login_btn{
+	color: #999;
+	font-size: 14px;
+}
+.free_btn a{
+	height: 23px;
+	padding: 0 12px;
+	margin-top:18px ;
+    background: #b61820;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.666;
+}
+.login_btn:hover,.free_btn a:hover{
+	transform: scale(1.2);
+}
+/*头部结束*/
+/*侧栏样式*/
+.aside_contact{
+	width: 62px;
+	height: 288px;
+	position: fixed;
+	right: 10px;
+	top: 250px;
+}
+.aside_contact>div{
+	position: relative;
+	height: 36px;
+	width: 60px;
+    padding: 12px 0;
+    margin-bottom: 10px;
+    border: 1px solid #bbb;
+	background:#fff url(../img/aside-contact.png) no-repeat -156px -2px;
+}
+.aside_contact>div .txt{
+	display: none;
+	height: 36px;
+	width: 60px;
+    padding: 12px 0;
+	font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    background: #8db2df;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*鼠标悬浮框*/
+.aside_contact>div .tip{
+	display: none;
+	width: 135px;
+    padding-right: 15px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    line-height: 40px;
+    top: 11px;
+    right: 66px;
+    font-size: 12px;
+    background:url(../img/aside-contact.png) 1px -9px no-repeat;
+}
+.aside_contact>div:hover .txt,.aside_contact>div:hover .tip{
+	display: block;
+}
+/*售前*/
+.aside_contact .ysp_tip{
+	background:#fff url(../img/aside-contact.png) no-repeat -156px -66px;
+}
+.aside_contact .ysp_tip .txt{
+	height: 52px;
+    padding: 4px 0;
+}
+/*帮助*/
+.aside_contact .help_tip{
+	background:#fff url(../img/aside-contact.png) no-repeat -82px -126px;
+}
+.aside_contact .help_tip .txt{
+	line-height: 32px;
+}
+/*试用*/
+.aside_contact .register_tip{
+	background: #fff;
+	height: 60px;
+	width: 60px;
+	padding: 0;
+	font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+}
+.aside_contact .register_tip a{
+	display: block;
+	height: 36px;
+	width: 60px;
+    padding: 12px 0;
+	color: #bbb;
+	font-weight: 700;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.aside_contact .register_tip a:hover{
+	color: #fff;
+	background: #8db2df;
+}
+/*侧栏结束*/
+/*广告样式*/
+.banner{
+	margin-top: 76px;
+	height: 520px;
+	width: 100%;
+}
+.banner a{
+	display: block;
+	width: 100%;
+	height: 520px;
+	background: url(../img/qiye_banner.jpg) center 0px no-repeat rgb(172, 38, 39);
+}
+/*广告结束*/
+/*优点开始*/
+.advantage{
+	height: 190px;
+	width: 1080px;
+	padding: 70px 0 60px 0;
+}
+.advantage ul{
+	width: 1080px;
+	height: 190px;
+}
+.advantage ul li{
+	float: left;
+	width: 180px;
+	height: 190px;
+	text-align: center;
+	white-space: nowrap;
+}
+.advantage ul li a{
+	display: block;
+}
+.advantage ul li span{
+	font-size: 18px;
+    line-height: 42px;
+    color: #025bc9;
+}
+.advantage ul li:hover img{
+	-webkit-animation-name: scale;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+}
+/*优点结束*/
+/*调查开始*/
+.inquiry{
+	width: 100%;
+	height: 170px;
+	padding: 50px 0;
+	background: #f1f3f4!important;
+	color: #666;
+    font-size: 24px;
+}
+.inquiry_con{
+	width: 1080px;
+	height: 170px;
+	line-height: 1.666;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.inquiry_con div:first-child{
+    text-align: center;
+	border-bottom:1px solid #dce6ec;
+}
+.inquiry_con div:first-child span{
+	font-size: 46px;
+    color: #025bc9;
+    font-weight: 700;
+}
+.inquiry_con div:nth-child(2){
+	width: 364px;
+	height: 65px;
+	padding: 25px 0 0 50px;
+	background: url(../img/calculator.png) no-repeat 0px 30px;
+}
+.inquiry_con div:nth-child(2) p:nth-child(2){
+	font-size: 16px;
+}
+.inquiry_con div:nth-child(2) span{
+	color: #025bc9;
+}
+.inquiry_con div:nth-child(2) input{
+	width: 174px;
+    height: 30px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    vertical-align: top;
+    margin-top: 6px;
+}
+/*调查结束*/
+/*免费试用信息表*/
+.reg_form{
+	width: 1080px;
+	height: 407px;
+	padding: 70px 0;
+	line-height: 1.666;
+    overflow: hidden;
+}
+.reg_form p{
+	padding-bottom: 15px;
+    text-align: center;
+    font-size: 24px;
+    color: #666;
+}
+.reg_form table{
+	width: 530px;
+    margin: 0 auto;
+    color: #666;
+    white-space: nowrap;
+}
+.reg_form table tr td:first-child{
+	width: 120px;
+	font-size: 16px;
+    text-align: right;
+}
+.reg_form table tr td:nth-child(2){
+	width: 365px;
+}
+.reg_form table tr td:nth-child(3){
+	font-size: 12px;
+}
+.reg_form table tr td{
+	padding: 10px 0;
+}
+.reg_form table tr td input[type=text]{
+	width: 346px;
+    height: 26px;
+    padding: 0 5px;
+    border: 1px solid #bbb;
+}
+.reg_form table tr:nth-child(2) td input{
+	width: 214px;
+}
+.reg_form table tr:nth-child(2) td input:first-child{
+	width: 100px;
+}
+.reg_form table tr:nth-child(2) td span{
+	display: inline-block;
+    margin: 0 2px;
+}
+.reg_form table tr td select{
+	    width: 177px;
+    height: 28px;
+}
+.reg_form table tr td input[type=submit]{
+    width: 138px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 21px;
+    color: #fff;
+    background: #3dbd82;
+    border: none;
+}
+/*信息表结束*/
+/*消息集合部分开始*/
+.informations_bg{
+	width: 100%;
+	height: 194px;
+	padding: 50px 0 40px;
+	background: #f1f3f4;
+}
+.informations{
+	width: 1080px;
+	height: 194px;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	line-height: 1.666;
+}
+.informations div p:first-child{
+	margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 28px;
+    color: #666;
+}
+.informations div ul li a{
+	display: inline-block;
+    width: 270px;
+    color: grey;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.informations .question{
+	width: 270px;
+	height: 194px;
+	border-right: 1px solid #c3c1c1;
+}
+.informations div p:nth-child(3){
+    line-height: 28px;
+    text-align: right;
+}
+.informations div p a{
+	color: #0154a0;
+    font-size: 12px;
+}
+.informations a:hover{
+	text-decoration: underline;
+}
+.news{
+	width: 270px;
+	height: 194px;
+	padding:0 50px;
+	border-right: 1px solid #c3c1c1;
+}
+.inf_contact{
+	width: 368px;
+	height: 194px;
+	padding: 0 0 0 50px;
+}
+.inf_contact img{
+	width: 367px;
+	height: 129px;
+}
+/*消息集合部分结束*/
+/*链接集合部分开始*/
+.link{
+	width: 1080px;
+	height: 80px;
+	padding: 50px 0;
+	overflow: hidden;
+}
+.link p{
+	font-size: 14px;
+    line-height: 28px;
+    color: #666;
+    font-weight: 700;
+}
+.link a{
+	font-size: 12px;
+    color: grey;
+    line-height: 26px;
+}
+.link div{
+	padding: 0 20px 0 9px;
+	float: left;
+}
+.link div>ul>li{
+	float: left;
+	display: inline-block;
+    margin-right: 15px;
+}
+.link .product{
+	padding: 0 20px 0 0;
+}
+.link .friendlink{
+	padding: 0 0 0 9px;
+}
+/*链接集合结束*/
+/*底部*/
+.footer_bg{
+	width: 100%;
+    height: 140px;
+    background: #666;
+}
+.footer{
+	width: 1080px;
+	height: 63px;
+	padding: 38px 0;
+	font-size: 12px;
+    line-height: 1.666;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.footer a{
+	display: inline-block;
+	color: #fff;
+}
+.footer img{
+	vertical-align: bottom;
+	margin-top: 3px;
+}
+/*底部结束*/

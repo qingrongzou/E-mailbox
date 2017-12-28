@@ -1,0 +1,280 @@
+/*通用样式*/
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+/*移动效果*/
+@-webkit-keyframes translate{
+	0%{
+		
+		transform:translateX(60px);
+	}
+	50%{
+		transform: translateX(30px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+/*页面容器*/
+.container{
+	width: 960px;
+	margin: 0 auto;
+	font-size: 12px;
+	line-height: 1.666;
+	font-family: verdana;
+}
+/*头部*/
+.header{
+	width: 960px;
+	height: 84px;
+	position: relative;
+	overflow: hidden;
+}
+/*logo样式*/
+.logo{
+	position: absolute;
+    top: 23px;
+    left: -15px;
+}
+.logo:hover{
+	-webkit-animation-name:translate ;
+    -webkit-animation-duration:1s;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-iteration-count: 1;
+}
+.logo a img{
+	width: 122px;
+	height: 44px;
+}
+.logo a:last-child{
+	display: inline-block;
+	width: 260px;
+	height: 40px;
+	background: url(../img/global.png) no-repeat 0px -189px;
+}
+/*头部导航样式*/
+.header_nav{
+	position: absolute;
+	right: 0;
+	top: 40px;
+}
+.header_nav ul{
+	display: block;
+	height: 19px;
+	
+}
+.header_nav ul li{
+	float: left;
+	margin-left: 12px;
+}
+.header_nav ul li a{
+	color: #888!important;
+}
+.header_nav ul li:first-child a{
+	color: red!important;
+}
+.header_nav a:hover{
+	text-decoration: underline;
+}
+/*头部结束*/
+/*主要内容*/
+.main{
+	width: 960px;
+	height: 486px;
+	background: url(../img/136login_bg.jpg) no-repeat;
+	position: relative;
+}
+/*main_nav样式*/
+.main_nav{
+	position: absolute;
+    left: 255px;
+    top: 66px;
+    width: 230px;
+    height: 340px;
+}
+.main_nav ul{
+	display: block;
+}
+.main_nav ul li a{
+	display: block;
+	width: 210px;
+	height: 102px;
+	background: url(../img/tab.gif) no-repeat;
+}
+.main_nav ul .m_nav1 a{
+	background-position:-1px -1px;
+}
+.main_nav ul .m_nav2 a{
+	background-position:-513px -103px;
+}
+.main_nav ul .m_nav3 a{
+	background-position:-1px -204px;
+}
+.main_nav ul .m_nav1 a:hover{
+	background-position:-258px -1px;
+}
+.main_nav ul .m_nav3 a:hover{
+	background-position:-257px -204px;
+}
+/*登录区样式*/
+.login{
+	position: absolute;
+    left: 464px;
+    top: 50px;
+	white-space: nowrap;
+    width: 440px;
+    height: 334px;
+    overflow: hidden;
+    -webkit-animation-name:fade-in ;
+    -webkit-animation-duration:2s;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-iteration-count: 1;
+}
+.login p{
+	white-space: nowrap;
+}
+/*登录标题*/
+.login_tit{
+	margin-left: 41px;
+    margin-top: 24px;
+    width: 265px;
+    height: 32px;
+    background: url(../img/global.png) no-repeat -384px -64px;
+}
+/*需填写的信息*/
+.login form{
+	margin-left: 41px;
+    margin-top: 6px;
+}
+.login form p{
+	padding: 8px 0;
+}
+.login form label{
+    width: 44px;
+    line-height: 30px;
+    margin-right: 5px;
+}
+#name,#password{
+    vertical-align: middle;
+    margin-right: 10px;
+    border: 1px solid #878787;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 3px 6px;
+    width: 182px;
+    background: #F1FFF7;
+}
+#name:focus,#password:focus{
+	background: #ffffd8;
+}
+.login form .name span{
+	vertical-align: middle;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 8px;
+}
+.login form .name select{
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+    font-family: verdana;
+    width: 93px;
+}
+.login form .password a{ 
+    color: #007B43;
+    text-decoration: underline;
+}
+.login form .edition{
+	padding-top: 4px;
+	height: 24px;
+}
+#edition{
+	margin-top: 4px;
+    width: 190px;
+    cursor: pointer;
+    vertical-align: top;
+	color: graytext;
+    font-size: 12px;
+    font-family: verdana;
+}
+.login form .options{
+	padding: 2px 0 8px 48px;
+}
+.login form .options label{
+	line-height: 19px;
+}
+.login form .options span{
+	color: #999;
+}
+.options input{
+	width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    padding: 0;
+    margin: -2px 3px 0 0;
+}
+.login form input[type="submit"]{
+	font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    width: 86px;
+    height: 34px;
+    cursor: pointer;
+    border: 0;
+    background: url(../img/global.png) no-repeat 0px -64px;
+}
+.login form input[type="submit"]:hover{
+    background: url(../img/global.png) no-repeat -128px -64px;
+}
+.login form .btn{
+	padding: 2px 0 8px 48px;
+}
+.login form>a{
+	margin-left: 48px;
+    font-size: 14px;
+    font-family: simsun;
+    line-height: 14px;
+    color: #F80606;
+}
+.login form>a:hover{
+	text-decoration: underline;
+}
+.login .reg{
+	margin-top: 2px;
+    margin-left: 89px;
+    color: #777;
+    font-size: 14px;
+}
+.login .reg a{
+	font-weight: bold;
+    padding-left: 10px;
+    color: #007B43;
+    text-decoration: underline;
+}
+/*主要内容结束*/
+/*底部*/
+.footer{
+	margin-top: 5px;	
+	text-align: center;
+	color: #888!important;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.footer a{
+	display: inline-block;
+	margin-right: 10px;
+	color: #888!important;
+}
+.footer a:hover{
+	text-decoration: underline;
+}
+.footer span:last-child{
+	margin-left: 10px;
+}

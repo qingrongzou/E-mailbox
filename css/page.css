@@ -1,0 +1,160 @@
+/*通用样式*/
+*{
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+.c{
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+	color: #3399ff;
+}
+a:hover{
+	text-decoration: underline;
+}
+ul{
+	list-style: none;
+}
+/*放大效果*/
+@-webkit-keyframes fade-in{
+	0%{
+		transform: scale(0);
+	}
+	40%{
+		transform: scale(40%);
+	}
+	60%{
+		transform: scale(60%);
+	}
+	100%{
+		transform: scale(100%);
+	}
+}
+/*头部样式*/
+.header{
+	height: 88px;
+	width: 100%;
+	background-color: #5779AF;
+}
+/*logo*/
+.logo{
+	width: 1000px;
+	height: 56px;
+	padding: 16px 0;
+	overflow: hidden;
+}
+.logo img{
+	float: left;
+}
+.logo span{
+	padding: 27px 0 0 15px; ;
+	color: #C7D1E1;
+	font-size: 14px;
+	float: left;
+}
+/*导航条*/
+.nav{
+	width: 1000px;
+	height: 40px;
+	font-size: 12px;
+	color: #999;
+	line-height: 40px;
+}
+/*头部样式结束*/
+/*主要内容开始*/
+.main{
+	width: 1000px;
+	height:1000px ;
+	font-size: 14px;
+	display: flex;
+	flex-direction: row;
+}
+/*省份目录样式*/
+.province{
+	width: 198px;
+	height: 993px;
+	border: 1px solid #E1E7F2;
+    background-color: #F9FBFF;
+    border-top:3px solid #5779AF;
+}
+.province a{
+	display: block;
+	color: #333333;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 20px;
+}
+.province a:hover{
+	text-decoration: none;
+	background-color: #C9D9F9;
+}
+.province ul li:first-child a{
+	font-weight: bold;
+	background-color: #C9D9F9;
+}
+.province .line{
+	height: 3px;
+	background-color: #5779AF;
+}
+/*详细信息*/
+.information{
+	margin-left: 20px;
+	transform-origin: topleft;
+	-webkit-animation-name:fade-in ;
+    -webkit-animation-duration:2s;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-iteration-count: 1;
+}
+.information table{
+	border-collapse:collapse;
+} 
+.information table tr{
+	height: 46px;
+	line-height: 46px;
+	border-bottom:1px solid #EDF0F6 ;
+}
+.information table tr td{
+	width: 68px;
+}
+/*信息第一行*/
+.information table tr:first-child td{
+	font-size: 24px;
+    color: #333333;
+    height: 46px;
+    line-height: 40px;
+    text-indent: 0;
+}
+/*信息第一列*/
+.information table tr td:first-child{
+	width: 320px;
+	text-indent: 10px;
+	color: #333;
+}
+/*信息第二列*/
+.information table tr td:nth-child(2){
+	width: 390px;
+	color: #666666;
+}
+/*信息第三列*/
+.information table tr td:nth-child(3){
+	text-align: center;
+}
+/*主要内容结束*/
+/*底部开始*/
+.footer{
+	width: 1000px;
+	height: 60px;
+	padding: 30px 0;
+	text-align: center;
+	color: #9F9F9F;
+	line-height: 30px;
+	font-size: 12px;
+	overflow: hidden;
+}
+.footer a{
+	color: #9F9F9F;
+	margin: 0 10px;
+}
+/*底部结束*/

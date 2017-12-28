@@ -1,0 +1,764 @@
+/*通用样式*/
+*{
+	margin: 0;
+	padding: 0;
+}
+.c{
+	margin: 0 auto;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	font: 12px/1.5 "Microsoft Yahei",Tahoma,Verdana;
+	font-family: Helvetica,"San Francisco","Microsoft Yahei","微软雅黑",Heiti;
+}
+/*放大效果*/
+@-webkit-keyframes fade-in{
+	0%{
+		transform: scale(0);
+	}
+	40%{
+		transform: scale(40%);
+	}
+	60%{
+		transform: scale(60%);
+	}
+	100%{
+		transform: scale(100%);
+	}
+}
+/*头部*/
+.header{
+	width: 100%;
+	height: 97px;
+	position: fixed;
+	background: #fff;
+	color: #000;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	border-bottom: 1px solid #e5e5e5;
+}
+.header_con{
+	height: 97px;
+	padding: 0 108px;
+	overflow: hidden;
+}
+/*logo*/
+.logo{
+	float: left;
+	height: 40px;
+	width: 194px;
+	margin-top: 26px;
+}
+.logo img{
+	height: 40px;
+	width: 194px;
+}
+/*导航*/
+.nav{
+	float: right;
+	height: 35px;
+	width: auto;
+	margin-top: 33px;	
+}
+.nav ul{
+	height: 34px;
+	padding-bottom: 1px;
+	width: auto;
+}
+.nav ul li{
+	float: left;
+	padding: 5px 8px;
+    font-size: 0;
+}
+.nav ul li a{
+	display: inline-block;
+    color: #585c60;
+    font-size: 16px;
+    margin-left: 80px;
+    position: relative;
+}
+.nav ul li a:before{
+	content: "";
+	width: 0;
+	height: 2px;
+	background-color: #25a692;
+	position: absolute;
+	top: 24px;
+	left: 0;
+	transition: all 1s linear;
+}
+.nav ul li:first-child a:before{
+	width: 100%;
+}
+.nav ul li a:hover:before{
+	width:100% ;
+}
+/*头部结束*/
+/*banner样式*/
+.banner{
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 90;
+	overflow: hidden;
+}
+/*视频广告*/
+.banner video{
+	width: 100%;
+	height: 100%;
+}
+.video_nav01{
+	width: 50px;
+	height: 3px;
+	background-color: #fff;
+	position: absolute;
+	left: 170px;
+	bottom: 90px;
+	z-index: 95;
+	background: #2c88f5;
+	transform: scale(1.2);
+}
+.video_nav02{
+	width: 50px;
+	height: 3px;
+	background-color: #fff;
+	position: absolute;
+	left: 230px;
+	bottom: 90px;
+	z-index: 95;
+}
+.video02{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 92;
+}
+.video_nav02:hover~video{
+	display: block;
+}
+.video_nav02:hover{
+	background: #2c88f5;
+	transform: scale(1.2);
+}
+.video_nav02:hover+.video_nav01{
+	background: #fff;
+	transform: scale(1);
+}
+/*通信*/
+.communication{
+	width: 525px;
+	height: 210px;
+	position: absolute;
+	left: 170px;
+	bottom: 170px;
+	z-index: 95;
+	color: #fff;
+	white-space: nowrap;
+	-webkit-animation-name:fade-in ;
+    -webkit-animation-duration:2s;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-iteration-count: 1;
+}
+.communication h1{
+	font-size: 52px;
+    font-weight: 400;
+}
+.communication p{
+	font-size: 19px;
+    margin-bottom: 51px;	
+}
+.communication a{
+	display: inline-block;
+	width: 146px;
+	height: 50px;
+	border: 1px solid #fff;
+	text-align: center;
+    margin-right: 24px;
+    line-height: 52px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 6px;
+}
+.communication a:hover{
+	background: #fff;
+	color: #2c88f5;
+}
+.communication a:nth-child(3){
+    background: #2c88f5;
+    width: 148px;
+	height: 52px;
+	border: 0 none;
+}
+.communication a:nth-child(3):hover{
+    color: #fff;
+	background: #3e94fc;
+}
+/*广告结束*/
+/*概要*/
+.summary{
+	width: 1150px;
+	height: 620px;
+	padding-top: 125px;
+    color: #585c60;
+    position: relative;
+    z-index: 90;
+}
+.summary h2{
+	font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 42px;
+}
+.summary p{
+	opacity:0.8;
+    font-size: 18px;
+}
+/*手机图片*/
+.phone{
+	position: absolute;
+    top: 61px;
+    left: 643px;
+    z-index: 92;
+}
+.phone img{
+	width: 356px;
+	height: 615px;
+}
+/*图标集合*/
+.icons{
+	line-height: 0;
+	font: 0;
+}
+.icons span{
+	display: inline-block;
+	position: absolute;
+	z-index: 95;
+}
+.summary:hover .icons span{
+	transform: translateY(-30px);
+}
+.m163{
+	left: 523px;
+    top: 213px;
+	transition: all 3s linear;
+}
+.m163 img{
+	width: 78px;
+	height: 78px;
+}
+.mail{
+	left: 231px;
+    top: 357px;
+	transition: all 2s linear;
+}
+.mail img{
+	width: 94px;
+	height: 94px;
+}
+.qq{
+	left: 1156px;
+    top: 360px;
+	transition: all 1s linear;
+}
+.qq img{
+	width: 86px;
+	height: 86px;
+}
+.qiye{
+    left: 1050px;
+    top: 262px;	
+	transition: all 2s linear;
+}
+.qiye img{
+	width: 62px;
+	height: 62px;
+}
+.m126{
+	left: 924px;
+    top: 458px;
+	transition: all 1s linear;
+}
+.m126 img{
+	width: 63px;
+	height: 63px;
+}
+.outlook{
+    left: 431px;
+    top: 468px;
+	transition: all 4s linear;
+}
+.outlook img{
+	width: 53px;
+	height: 53px;
+}
+.letter{
+    left: 607px;
+    top: 386px;	
+	transition: all 2s linear;
+}
+.letter img{
+	width: 34px;
+	height: 34px;
+}
+/*概要结束*/
+/*平台*/
+.platform{
+	width: 100%;
+	height: 816px;
+	min-width: 1150px;
+	background: #f6f6f6;
+}
+.platform_con{
+	width: 1150px;
+	height: 816px;
+    padding-top: 125px;
+	text-align: center;
+	position: relative;
+    color: #585c60;
+}
+.platform_con h2{
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 42px;
+}
+.platform_con p{
+    opacity: 0.8;
+    font-size: 18px;
+}
+/*平台图片集合*/
+.platform_wrap{
+	z-index: 95;
+}
+.platform_wrap span{
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	display: inline-block;
+	transition: all 2s linear;
+}  
+.watch{
+	left: 0;
+    top: 541px;
+}
+.watch img{
+	width: 111px;
+	height: 178px;
+}
+.platform_wrap .iphone{
+	left: 114px;
+    top: 417px;
+}
+.platform_wrap .iphone img{
+	width: 169px;
+	height: 316px;
+}
+.ipad{
+    left: 306px;
+    top: 404px;
+}
+.ipad img{
+	width: 239px;
+	height: 345px;
+}
+.macbook{
+    left: 538px;
+    top: 345px;
+}
+.macbook img{
+	width: 671px;
+	height: 445px;
+}
+.platform:hover .platform_wrap span{
+	transform: translateY(-20px);
+}
+/*平台结束*/
+/*会话*/
+.conversation{
+	width: 100%;
+	height: 542px;
+	background: url(../img/conversation_bg.jpg) no-repeat center top;
+	z-index: 90;
+}
+.conversation_con{
+	width: 1150px;
+	height: 542px;
+	padding-top: 238px;
+    color: #fff;
+	position: relative;
+}
+.conversation_con h2{
+	font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 27px;
+    line-height: 42px;
+}
+.conversation_con p{
+	opacity: 0.8;
+    font-size: 18px;
+}
+/*会话图片*/
+.conversation_wrap{
+	font-size: 0;
+	line-height: 0;
+}
+.conversation_wrap span{
+	display: inline-block;
+	position: absolute;
+	z-index: 95;
+	transition: all 2s linear;
+}
+.conversation_wrap .iphone{
+	right: 64px;
+	top: 40px;
+}
+.conversation_wrap .iphone img{
+	width: 356px;
+	height: 618px;
+}
+.conversation_wrap .card1{
+	right: 144px;
+    top: 284px;
+}
+.conversation_wrap .card1 img{
+	width: 281px;
+	height: 154px;
+}
+.conversation_wrap .card2{
+    right: 57px;
+    top: 407px;
+}
+.conversation_wrap .card2 img{
+	width: 281px;
+	height: 118px;
+	
+}
+.conversation:hover .conversation_wrap .card1{
+    transform: translateY(-36px);
+}
+.conversation:hover .conversation_wrap .card2{
+    transform: translateY(-43px);
+}
+/*会话结束*/
+/*行程*/
+.schedule{
+	width: 100%;
+	height: 1354px;
+	background: #f6f6f6;
+    color: #585c60;
+	overflow: hidden;    
+}
+.schedule_con{
+	width: 1150px;
+	height: 507px;
+    text-align: right;
+    position: relative;
+	z-index: 90;
+}
+.schedule_con h2{
+    padding-top: 408px;
+	font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 42px;
+}
+.schedule_con p{
+	opacity: 0.8;
+    font-size: 18px;
+}
+/*行程图片*/
+.schedule_wrap{
+	width: 666px;
+	height: 347px;
+	background: url(../img/schedule_bg.png) no-repeat;
+	position: absolute;
+	left: -60px;
+    top: 274px;
+    z-index: 92;
+}
+.schedule_wrap span{
+	display: inline-block;
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+}
+/*行程钩号背景*/
+.tick_bg{
+	z-index: 95;
+	transition: all 2s linear;
+}
+.tick_bg1{
+	left: 65px;
+    top: 98px;
+}
+.tick_bg1 img{
+	width: 152px;
+	height: 166px;
+}
+.tick_bg2{
+	left: 240px;
+    top: 86px;
+}
+.tick_bg2 img{
+    left: 248px;
+    top: 90px;
+}
+.tick_bg3{
+	left: 490px;
+    top: 120px;
+}
+.tick_bg3 img{
+	width: 120px;
+	height: 130px;
+}
+/*钩号*/
+.tick{
+	z-index: 97;
+	transition: all 2s linear;
+}
+.tick1{
+    left: 90px;
+    top: 120px;
+}
+.tick1 img{
+	width: 97px;
+	height: 72px;
+}
+.tick2{
+    left: 266px;
+    top: 70px;
+}
+.tick2 img{
+	width: 187px;
+	height: 139px;
+}
+.tick3{
+    left: 518px;
+    top: 144px;
+}
+.tick3 img{
+	width: 70px;
+	height: 52px;
+}
+.schedule:hover .tick_bg{
+	transform: translateY(-50px);
+}
+.schedule:hover .tick{
+	transform: translateY(-70px);
+}
+/*行程结束*/
+.sevice_con{
+	width: 1150px;
+	padding-top: 460px;
+	position: relative;
+}
+.sevice_con h2{
+	font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 42px;
+}
+.sevice_con p{
+	opacity: 0.8;
+    font-size: 18px;
+}
+.sevice_con p a{
+	display: inline-block;
+	margin-top: 90px;
+	color: #2a83f2;
+    font-size: 18px;
+}    
+.sevice_con p a img{
+	width: 16px;
+    height: 12px;
+    padding-left: 6px;
+	transition: all 1s linear;
+}
+.sevice_con p a:hover img{
+	transform: translateX(5px);
+	transition: all 1s linear;
+}
+.sevice_con>img{
+	width: 657px;
+	height: 471px;
+	position: absolute;
+	right: 0;
+    bottom: 0;
+    z-index: 95;
+}
+/*服务结束*/
+.download{
+	width: 1050px;
+	height: 542px;
+}
+.download>p{
+	font-size: 24px;
+    line-height: 25px;
+    color: #585c60;
+    padding: 68px 0 25px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.download_con{
+    width: 570px;
+    height: 162px;
+    padding: 68px 0 66px;
+    display: flex;
+    flex-direction: row;
+}
+.download_con>ul img{
+	width: 134px;
+	height: 134px;
+}
+.dow_img li:last-child{
+	font-size: 16px;
+    color: #797d80;
+    margin: 11px 0 0;
+    line-height: 17px;
+    text-align: center;
+}
+.dow_input{
+	padding: 12px 0 0 103px;
+}
+.dow_input li:first-child{
+	font-size: 18px;
+    color: #797d80;
+    margin-bottom: 26px;
+    text-align: left;
+}
+.dow_input li:last-child{
+	background-color: #ebeef1;
+    height: 56px;
+    padding: 0 10px 0 16px;
+    border-radius: 4px;
+    font-size: 0;
+    width: 306px;
+    position: relative;
+}
+.dow_input li:last-child input{
+	background-color: #ebeef1;
+    height: 56px;
+    width: 306px;
+    color: #585c60;
+    line-height: 56px;
+	border: 0;
+    z-index: 90;
+    font-size: 16px;
+    outline: none;
+}
+.dow_input li:last-child button{
+	padding: 0 13px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #2a83f2;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 95;
+	border: 0;
+}
+/*链接列表*/
+.btn_list{
+	font-size: 0;
+    min-width: 1150px;
+    padding-bottom: 66px;
+}
+.btn_list li{
+	display: inline-block;
+    width: 191px;
+    height: 61px;
+    line-height: 61px;
+    box-sizing: border-box;
+    border: 1px solid #bcbebf;
+    text-align: center;
+    border-radius: 5px;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    margin-left: 28px;
+}
+.btn_list li:first-child{
+	margin: 0;
+}
+.btn_list li a{
+	color: #585c60;
+    opacity: 0.8;
+	display: inline-block;
+    font-size: 19px;
+    line-height:61px;
+    vertical-align: middle;
+    text-align: left;
+}
+.btn_list li img{
+	display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 13px;
+}
+.btn_list li a span{
+	display: inline-block;
+    position: relative;
+    transition: all 1s linear
+	    
+}
+.btn_list li a span:before{
+	content: "立即下载";
+	position: absolute;
+	bottom: 4px;
+	left: 0px;
+	font-size: 12px;
+	line-height: 14px;
+    color: #2a83f2;
+    line-height: 14px;
+    display: none;
+}
+.btn_list li:hover{
+	background: #f1f1f2;
+}
+.btn_list li a:hover span{
+	transform: translateY(-8px);
+}
+.btn_list li a:hover span:before{
+	display: block;
+}
+/*下载结束*/
+/*底部*/
+.footer{
+	width: 1150px;
+	height: 80px;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 17px;
+    width: 1150px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #8a8d8f;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.footer span{
+	margin-right: 700px;
+}
+.footer a{
+    padding-left: 10px;
+    color: #8a8d8f;
+    font-size: 12px;
+    height: 12px;
+    display: inline-block;
+    line-height: 12px;
+}
+.footer a:hover{
+    color: #2a83f2;
+}
+/*底部结束*/
